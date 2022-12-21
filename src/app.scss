@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.viewport {
+    background-image: url('../public/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    .join-form {
+        width: 360px;
+        border-radius: 32px;
+        background-color: rgba(0, 24, 40, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(3px);
+        position: absolute;
+        top: calc(50vh - 280px);
+        left: calc(50vw - 180px);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 120px 0;
+        input {
+            width: 336px;
+            height: 64px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 5px;
+            margin-bottom: 32px;
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            padding-left: 28px;
+        }
+        button {
+            background: #428226;
+            border-radius: 5px;
+            width: 336px;
+            height: 48px;
+            border: none;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+.main {
+    position: fixed;
+    bottom: 0;
+    left: calc(50vw - 187px);
+    .messages {
+        margin: 0 auto;
+        width: 340px;
+        border-radius: 32px;
+        background-color: white;
+        border: 1px solid red;
+        padding: 16px;
+        display: flex;
+        flex-direction: column-reverse;
+        //justify-content: flex-end;
+        height: 360px;
+        overflow-y: scroll;
+        .my-message {
+            text-align: end;
+        }
+        .title {
+            font-weight: 700;
+            color: blue;
+        }
+        .content {
+            font-size: 22px;
+            max-width: 360px;
+            overflow-wrap: anywhere;
+        }
+    }
+    .send {
+        width: 374px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 8px;
+        button {
+            height: 40px;
+            width: 72px;
+            border: none;
+            background-color: green;
+            border-radius: 5px;
+            color: white;
+            font-weight: 700;
+        }
+        input {
+            width: 280px;
+            height: 34px;
+            border-radius: 5px;
+            border: 2px solid red;
+            font-size: 24px;
+            padding-left: 16px;
+        }
+    }
+}
